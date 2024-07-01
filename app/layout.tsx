@@ -6,8 +6,8 @@ import { AI } from "./action";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "pin",
-  description: "Created by Developers Digest",
+  title: "Robi",
+  description: "AI Companion for Kindergarten",
 };
 
 export default function RootLayout({

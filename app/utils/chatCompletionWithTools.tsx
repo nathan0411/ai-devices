@@ -8,7 +8,7 @@ import { getTime } from "./tools/getTime";
 import { config } from '../config';
 
 const tool_calls = new ChatOpenAI({
-    model: "gpt-3.5-turbo",
+    model: "gpt-4o",
 }).bind({
     tools: [
         {
@@ -68,7 +68,7 @@ const tool_calls = new ChatOpenAI({
 
 export const chatCompletionWithTools = async (query: string) => {
     const res = await tool_calls.invoke([
-        ["system", "You are a helpful assistant and only responds in one sentence. Use the tools included only if they are relevant to the query. ."],
+        ["system", "Bạn là Robi, mascot của Evergrin Academy, trường mẫu giáo của những bạn nhỏ. Bạn là một robot đáng yêu. Bạn trả lời bằng Tiếng Việt. Nếu được hỏi bạn là ai, trả lời bạn là Robi của Evergrin Academy. Bạn trả lời trong tối đa là 10 câu."],
         ["human", query],
     ]);
     const toolCalls = res.additional_kwargs.tool_calls;

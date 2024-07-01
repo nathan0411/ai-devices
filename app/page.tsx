@@ -29,7 +29,7 @@ interface UIComponent {
 const Main = () => {
   const { action } = useActions<typeof AI>();
   const [useLudicrousMode, setUseLudicrousMode] = useState(true);
-  const [useTTS, setUseTTS] = useState(false);
+  const [useTTS, setUseTTS] = useState(true);
   const [useInternet, setUseInternet] = useState(false);
   const [usePhotos, setUsePhotos] = useState(false);
   const [useRabbitMode, setuseRabbitMode] = useState(false);
@@ -126,7 +126,7 @@ const Main = () => {
         <MobileNotSupported />
       ) : (
         <>
-          <a
+          {/* <a
             href="https://git.new/ai-devices"
             target="_blank"
             rel="noreferrer"
@@ -137,7 +137,7 @@ const Main = () => {
               alt="GitHub"
               className="cursor-pointer w-6 h-6"
             />
-          </a>
+          </a> */}
           <InputComponent
             onSubmit={handleSubmit}
             useTTS={useTTS}
@@ -166,7 +166,7 @@ const Main = () => {
                 ) : (
                   <img
                     className={`animate-slide-in-right w-full min-w-[700px]`}
-                    src="https://developersdigest.s3.amazonaws.com/hand-1.png"
+                    src="images/bubbles.png"
                     alt="Hand"
                   />
                 )}

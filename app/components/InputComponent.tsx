@@ -97,7 +97,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
           </button>
         ) : (
           <img
-            src="https://developersdigest.s3.amazonaws.com/pin.png"
+            src="images/View_Front.png"
             alt="Second"
             className={`w-full ${recording ? '' : ''} prevent-image-drag cursor-pointer`}
             onMouseDown={handleRecording}
@@ -108,7 +108,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
         )}
         {recording && (
           <div className="absolute top-[99px] right-[39px]">
-            <div className="w-2 h-2 bg-red-500 rounded-full shadow-pulse"></div>
+            <div className="w-4 h-4 bg-red-500 rounded-full shadow-pulse"></div>
           </div>
         )}
         {usePhotos && (
